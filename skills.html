@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills - Yashas' Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preload" href="assets/fonts/PressStart2P-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <div class="center-container">
+    <header>
+      <h1 class="glow-text outlined-text">Skills</h1>
+      <nav>
+        <a href="index.html" class="menu-button">Home</a>
+        <a href="projects.html" class="menu-button">Projects</a>
+        <a href="about.html" class="menu-button">About</a>
+        <a href="contact.html" class="menu-button">Contact</a>
+      </nav>
+    </header>
+
+    <main class="skills-section">
+      <div class="skill">
+        <span class="skill-name">Python</span>
+        <span class="stars" data-rating="5"></span>
+      </div>
+
+      <div class="skill">
+        <span class="skill-name">SQL</span>
+        <span class="stars" data-rating="4"></span>
+      </div>
+
+      <div class="skill">
+        <span class="skill-name">R</span>
+        <span class="stars" data-rating="4"></span>
+      </div>
+
+      <div class="skill">
+        <span class="skill-name">Machine Learning</span>
+        <span class="stars" data-rating="4"></span>
+      </div>
+
+      <div class="skill">
+        <span class="skill-name">Pandas</span>
+        <span class="stars" data-rating="5"></span>
+      </div>
+
+      <div class="skill">
+        <span class="skill-name">NumPy</span>
+        <span class="stars" data-rating="5"></span>
+      </div>
+
+      <div class="skill">
+        <span class="skill-name">Matplotlib</span>
+        <span class="stars" data-rating="5"></span>
+      </div>
+
+      <div class="skill">
+        <span class="skill-name">Seaborn</span>
+        <span class="stars" data-rating="5"></span>
+      </div>
+
+      <div class="skill">
+        <span class="skill-name">PowerBI</span>
+        <span class="stars" data-rating="2"></span>
+      </div>
+
+      <div class="skill">
+        <span class="skill-name">Statistical Modelling</span>
+        <span class="stars" data-rating="3"></span>
+      </div>
+
+      <div class="skill">
+        <span class="skill-name">Data preprocessing</span>
+        <span class="stars" data-rating="4"></span>
+      </div>
+
+      <div class="skill">
+        <span class="skill-name">Jupyter</span>
+        <span class="stars" data-rating="4"></span>
+      </div>
+
+      <div class="skill">
+        <span class="skill-name">Git</span>
+        <span class="stars" data-rating="2"></span>
+      </div>
+
+      <div class="skill">
+        <span class="skill-name">React</span>
+        <span class="stars" data-rating="1"></span>
+      </div>
+
+      <div class="skill">
+        <span class="skill-name">CSS</span>
+        <span class="stars" data-rating="1"></span>
+      </div>
+
+      <div class="skill">
+        <span class="skill-name">HTML</span>
+        <span class="stars" data-rating="1"></span>
+      </div>
+    </main>
+  </div>
+
+<section class="soft-skills-section">
+  <h2 class="glow-text outlined-text">Soft Skills</h2>
+
+  <div class="soft-skill">Problem Solving</div>
+  <div class="soft-skill">Communication</div>
+  <div class="soft-skill">Teamwork</div>
+  <div class="soft-skill">Adaptability</div>
+  <div class="soft-skill">Time Management</div>
+</section>
+
+
+  <script>
+    document.querySelectorAll(".stars").forEach((container) => {
+      const rating = parseInt(container.getAttribute("data-rating"));
+      for (let i = 0; i < rating; i++) {
+        const star = document.createElement("img");
+        star.src = "assets/images/pixel-star.png";
+        star.alt = "★";
+        container.appendChild(star);
+      }
+    });
+  </script>
+</body>
+</html>

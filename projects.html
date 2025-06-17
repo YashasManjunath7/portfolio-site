@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects - Yashas' Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preload" href="assets/fonts/PressStart2P-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+</head>
+<body>
+  <div class="overlay"></div>
+
+  <div class="center-container">
+    <header>
+      <h1 class="glow-text outlined-text">Projects</h1>
+      <nav>
+        <a href="index.html" class="menu-button">Home</a>
+        <a href="skills.html" class="menu-button">Skills</a>
+        <a href="about.html" class="menu-button">About</a>
+        <a href="contact.html" class="menu-button">Contact</a>
+      </nav>
+    </header>
+
+    <main class="projects-section">
+      <!-- Project 1 -->
+      <div class="project">
+        <h2 class="project-title glow-text outlined-text" onclick="toggleDetails('project1')">AI-Powered Tetris Gameplay Simulation</h2>
+        <p class="short-desc" id="short-project1">A machine learning classifier trained on simulated human-like Tetris gameplay to predict piece types using rotation, color, and spawn behavior features.</p>
+        <div class="project-details" id="project1">
+          <p>This project implements a Tetris gameplay simulator combined with a machine learning pipeline to classify Tetris moves as good or bad based on their impact on the board state. The goal is to use board heuristics and simulation data to train a model capable of evaluating the quality of Tetris piece placements automatically.</p>
+          <a href="https://github.com/YashasManjunath7/tetris_classifier" class="github-link" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project">
+        <h2 class="project-title glow-text outlined-text" onclick="toggleDetails('project2')">Steam Game Analytics and Recommendation Platform</h2>
+        <p class="short-desc" id="short-project2">Built using Python, Dash, and Plotly, this app processes Steam data to display ratings, pricing trends, genre analytics, and gives personalized recommendations using clustering and regression techniques.</p>
+        <div class="project-details" id="project2">
+          <p>Developed an interactive Steam Game Analytics and Recommendation Platform using Python, Dash, and machine learning. This web app analyzes Steam game data to deliver insights on ratings, pricing trends, and success metrics, while offering game recommendations and dynamic pricing suggestions. Leveraging Pandas, Scikit-learn, and Plotly, it features statistical analysis (e.g., t-tests, effect sizes), time-series decomposition, and a cosine similarity-based recommendation system—all integrated into a user-friendly dashboard.
+</p>
+          <a href="https://github.com/YashasManjunath7/game_analysis" class="github-link" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project">
+        <h2 class="project-title glow-text outlined-text" onclick="toggleDetails('project3')">Anomaly Detection Using Autoencoder</h2>
+        <p class="short-desc" id="short-project3">Built an anomaly detection system using Isolation Forest and DBSCAN, leveraging EDA and preprocessing to uncover irregular patterns and generate actionable insights.</p>
+        <div class="project-details" id="project3">
+          <p>Developed an anomaly detection model using advanced machine learning techniques. Focused on data preprocessing, EDA, and implementing algorithms like Isolation Forest and DBSCAN to identify irregular patterns. Delivered actionable insights by evaluating model performance with key metrics and visualizations.</p>
+          <a href="https://github.com/YashasManjunath7/anomaly_detection" class="github-link" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="project">
+        <h2 class="project-title glow-text outlined-text" onclick="toggleDetails('project4')">Stock Prediction Using Hybrid Machine Learning Models</h2>
+        <p class="short-desc" id="short-project4">Developed deep learning models (LSTM, CNN, hybrid) to enhance stock price prediction accuracy by capturing temporal patterns and market volatility.</p>
+        <div class="project-details" id="project4">
+          <p>Developed and compared advanced machine learning models, including LSTM, CNN, and hybrid architectures, to predict stock prices. Achieved improved accuracy by leveraging deep learning techniques to capture complex patterns and temporal dependencies. The study highlights the strengths of hybrid models in addressing market volatility and demonstrates their potential for financial forecasting.</p>
+          <a href="https://github.com/YashasManjunath7/stock_hybrid" class="github-link" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="project">
+        <h2 class="project-title glow-text outlined-text" onclick="toggleDetails('project5')">Stock price prediction using LSTM</h2>
+        <p class="short-desc" id="short-project5">Created an LSTM-based stock forecasting tool with an interactive Dash dashboard for visualizing trends, comparing predictions, and analyzing market dynamics.</p>
+        <div class="project-details" id="project5">
+          <p>Developed a stock price forecasting tool using LSTM models, integrated with an interactive Dash dashboard for data visualization. The project enables trend analysis and comparisons between actual and predicted prices, offering insights into market trends with features like high/low price tracking and market volume analysis.</p>
+          <a href="https://github.com/YashasManjunath7/lstm_forecast" class="github-link" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="project">
+        <h2 class="project-title glow-text outlined-text" onclick="toggleDetails('project6')">Twitch Data Dashboard</h2>
+        <p class="short-desc" id="short-project6">Analyzed Twitch streaming data to reveal trends in channel performance and audience engagement, offering insights through visualizations of views, watch time, and follower growth.</p>
+        <div class="project-details" id="project6">
+          <p>Analyzed Twitch streaming data to uncover platform trends, channel performance, and audience engagement. Key highlights include identifying top channels by views and watch time, analyzing language-based watch time distribution, and visualizing metrics like stream time, average viewers, and follower growth. This project provides valuable insights for content creators to optimize performance and understand audience behavior on Twitch.</p>
+          <a href="https://github.com/YashasManjunath7/twitch_data" class="github-link" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+<script>
+  function toggleDetails(id) {
+    const details = document.getElementById(id);
+    const shortDesc = document.getElementById("short-" + id);
+
+    const isOpen = details.style.display === "block";
+
+    // Hide all others first
+    document.querySelectorAll('.project-details').forEach(d => d.style.display = 'none');
+    document.querySelectorAll('.short-desc').forEach(s => s.style.display = 'block');
+
+    if (!isOpen) {
+      details.style.display = "block";
+      shortDesc.style.display = "none";
+    }
+  }
+</script>
+</body>
+</html>
