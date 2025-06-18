@@ -202,7 +202,7 @@ footer {
 
 .soft-skill {
   color: #000;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.4);
   border-left: 4px solid #fff;
   padding: 10px;
   margin: 0.5rem 0;
@@ -214,9 +214,8 @@ footer {
   max-width: 800px;
   margin: 2rem auto;
   text-align: left;
-  font-size: 14px;
+  font-size: 16px;
   color: white;
-  background-color: rgba(255, 255, 255, 0.6)
 }
 
 .about-section h2 {
